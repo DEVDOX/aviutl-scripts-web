@@ -52,7 +52,7 @@ const Menu: React.FC = () => {
           <Link href="/">
             <button
               type="button"
-              className="w-full py-2 pl-8 transition duration-500 ease-in-out focus:text-pink-500 dark-focus:text-pink-400 focus:outline-none"
+              className="w-full py-2 pl-8 transition duration-500 ease-in-out focus:outline-none"
             >
               <span className="flex items-center">
                 <Icon className="w-4 h-4" size={1} path={mdiLoginVariant} />
@@ -65,7 +65,7 @@ const Menu: React.FC = () => {
           <Link href="/">
             <button
               type="button"
-              className="w-full py-2 pl-8 transition duration-500 ease-in-out focus:text-pink-500 dark-focus:text-pink-400 focus:outline-none"
+              className="w-full py-2 pl-8 transition duration-500 ease-in-out focus:outline-none"
             >
               <span className="flex items-center">
                 <Icon className="w-4 h-4" size={1} path={mdiArrowLeft} />
