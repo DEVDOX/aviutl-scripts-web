@@ -1,0 +1,4 @@
+.base {
+  @apply text-black bg-white dark:text-white dark:bg-black;
+  @apply dark:text-white dark:bg-black;
+}

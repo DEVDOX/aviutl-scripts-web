@@ -1,0 +1,4 @@
+.base {
+  @apply m-0;
+  @apply focus:outline-none;
+}
