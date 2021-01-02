@@ -1,26 +1,46 @@
 .base {
-  @apply m-0;
+  /* base */
 }
 
 /* Size */
-.size-sm {
-  font-size: 1.4rem;
+.size-h1 {
+  font-size: 4.8rem;
 }
 
-.size-md {
-  font-size: 1.8rem;
+.size-h2 {
+  font-size: 3.6rem;
 }
 
-.size-lg {
-  font-size: 2.4rem;
-}
-
-.size-xl {
+.size-h3 {
   font-size: 2.8rem;
 }
 
-.size-xxl {
-  font-size: 3.6rem;
+.size-h4 {
+  font-size: 2.4rem;
+}
+
+.size-subtitle1 {
+  font-size: 2.4rem;
+}
+
+.size-subtitle2 {
+  font-size: 1.8rem;
+}
+
+.size-body1 {
+  font-size: 1.8rem;
+}
+
+.size-body2 {
+  font-size: 1.4rem;
+}
+
+.size-small {
+  font-size: 1.2rem;
+}
+
+.size-button {
+  font-size: 1.4rem;
 }
 
 .size-inheret {

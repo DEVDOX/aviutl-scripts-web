@@ -1,0 +1,7 @@
+.base {
+  @apply flex-col bg-gray-900;
+}
+
+.main {
+  @apply flex-1 w-full h-full text-gray-400;
+}
