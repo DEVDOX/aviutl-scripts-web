@@ -26,7 +26,7 @@ const Card: React.FC = ({ children }) => (
             <Icon className="w-4 h-4" path={mdiHeart} />
             <p className="text-sm">17</p>
           </div>
-          {/* 動く場合と動かない場合で変える */}
+          {/* スクリプトが正常動作するかしないかで変える */}
           {true ? (
             <Icon
               className="w-4 h-4 font-bold text-green-500"
