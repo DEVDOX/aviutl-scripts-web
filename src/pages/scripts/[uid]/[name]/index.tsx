@@ -1,15 +1,9 @@
 import { Button } from '@/components/atoms';
 import { Layout } from '@/components/templates';
-import {
-  mdiAlertCircleOutline,
-  mdiDownload,
-  mdiGoogle,
-  mdiHeart,
-  mdiXml,
-} from '@mdi/js';
+import { mdiAlertCircleOutline, mdiDownload, mdiHeart, mdiXml } from '@mdi/js';
 import { Icon } from '@mdi/react';
 import { NextPage } from 'next';
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 
 const ScriptPage: NextPage = () => {
   const [isLiked, setIsLiked] = useState<boolean>(false);
