@@ -1,4 +1,11 @@
 .base {
-  @apply m-0;
+  @apply flex items-center justify-center px-4 py-2 space-x-1 text-white duration-150 transform rounded shadow-lg hover:-translate-y-1;
+  @apply hover:-translate-y-1;
   @apply focus:outline-none;
+  @apply active:translate-y-0;
+}
+
+.default {
+  @apply bg-gray-800;
+  @apply focus:bg-gray-800;
 }

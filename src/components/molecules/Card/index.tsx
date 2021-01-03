@@ -8,9 +8,9 @@ const Card: React.FC = ({ children }) => (
     href="/scripts/[uid]/[name]"
     as="/scripts/suf24kdhba244adb34gbs/sen_kurippingu"
   >
-    <article className="overflow-hidden duration-300 transform bg-gray-800 rounded shadow-lg cursor-pointer hover:-translate-y-1 hover:shadow-xl bg-opacity-40">
+    <article className="overflow-hidden duration-300 transform bg-gray-800 rounded shadow-lg cursor-pointer hover:-translate-y-1 hover:shadow-xl bg-opacity-40 active:translate-y-0">
       <img
-        alt="Placeholder"
+        alt="プレビュー"
         className="block w-full h-auto"
         src="https://picsum.photos/600/400/?random"
       />
@@ -23,14 +23,14 @@ const Card: React.FC = ({ children }) => (
         </header>
 
         <div className="flex items-end justify-between mx-2 leading-tight">
-          <p>AviUtl愛用者なら知らない人は居ないで...</p>
+          <p>AviUtl愛用者なら知らない人は居な...</p>
         </div>
 
         <footer className="flex items-center justify-between leading-none">
           <Link href="/">
             <a className="flex items-center text-black no-underline hover:underline">
               <img
-                alt="Placeholder"
+                alt="作成者"
                 className="block rounded-full"
                 src="https://picsum.photos/32/32/?random"
               />

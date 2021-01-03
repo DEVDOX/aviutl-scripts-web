@@ -21,11 +21,17 @@ module.exports = {
           DEFAULT: "#7289da",
           dark5: "#5e78d5",
         },
+      },
+      spacing: {
+        '128': '32rem',
       }
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['active'],
+      translate: ['active'],
+    },
   },
   plugins: [],
 }

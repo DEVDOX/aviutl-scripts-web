@@ -9,7 +9,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, className, type = `button`, ...props }, ref) => (
     <button
       ref={ref}
-      className={cx(className, classes.base)}
+      className={cx(classes.base, className || classes.default)}
       type={type}
       {...props}
     >
