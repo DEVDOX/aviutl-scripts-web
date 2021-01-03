@@ -1,11 +1,11 @@
 import React from 'react';
+import { NextPage } from 'next';
 import Menu from './Menu';
-import classes from './index.module.css';
 
-const Profile: React.FC = ({ children }) => (
+const ProfilePage: NextPage = () => (
   <div>
     <Menu />
   </div>
 );
 
-export default Profile;
+export default ProfilePage;

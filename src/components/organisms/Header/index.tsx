@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import cx from 'clsx';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useAccount } from '@/hooks/useAccount';
+import Icon from '@mdi/react';
+import { mdiLoginVariant } from '@mdi/js';
 import classes from './index.module.css';
 
 // Nav sample from: https://tailwindui.com/components/application-ui/navigation/navbars
@@ -11,6 +14,7 @@ const Header: React.FC = () => {
   const router = useRouter();
 
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const { isLogin, setIsLogin } = useAccount();
 
   return (
     <nav className="bg-gray-800">
@@ -62,16 +66,20 @@ const Header: React.FC = () => {
           </div>
           <div className="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
             <div className="flex items-center flex-shrink-0">
-              <img
-                className="block w-auto h-8 lg:hidden"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                alt="Workflow"
-              />
-              <img
-                className="hidden w-auto h-8 lg:block"
-                src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
-                alt="Workflow"
-              />
+              <Link href="/">
+                <a className="focus:outline-none">
+                  <img
+                    className="block w-auto h-8 lg:hidden"
+                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                    alt="Workflow"
+                  />
+                  <img
+                    className="hidden w-auto h-8 lg:block"
+                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                    alt="Workflow"
+                  />
+                </a>
+              </Link>
             </div>
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
@@ -99,21 +107,30 @@ const Header: React.FC = () => {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             {/* <!-- Profile dropdown --> */}
             <div className="relative ml-3">
-              <Link href="/profile">
-                <button
-                  type="button"
-                  className="flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                  id="user-menu"
-                  aria-haspopup="true"
-                >
-                  <span className="sr-only">プロフィールを開く</span>
-                  <img
-                    className="w-8 h-8 rounded-full"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  />
-                </button>
-              </Link>
+              {isLogin ? (
+                <Link href="/profile">
+                  <button
+                    type="button"
+                    className="flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                    id="user-menu"
+                    aria-haspopup="true"
+                  >
+                    <span className="sr-only">プロフィールを開く</span>
+                    <img
+                      className="w-8 h-8 rounded-full"
+                      src="https://picsum.photos/32/32/?random"
+                      alt=""
+                    />
+                  </button>
+                </Link>
+              ) : (
+                <Link href="/signin">
+                  <p className="flex items-center justify-center space-x-1 text-gray-200 cursor-pointer hover:text-gray-300">
+                    <Icon className="w-5 h-5" path={mdiLoginVariant} />
+                    <span>Sign in</span>
+                  </p>
+                </Link>
+              )}
             </div>
           </div>
         </div>

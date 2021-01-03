@@ -10,7 +10,7 @@ const Layout: React.FC = ({ children }) => (
 
     <div className={classes.main}>{children}</div>
 
-    {/* <Footer /> */}
+    <Footer />
   </div>
 );
 

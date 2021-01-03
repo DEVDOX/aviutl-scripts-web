@@ -7,6 +7,10 @@ module.exports = {
     extend: {
       colors: {
         /* Brands */
+        google: {
+          DEFAULT: "#d32f2f",
+          dark: "#b71c1c",
+        },
         twitter: {
           light5: "#35abf3",
           DEFAULT: "#1da1f2",
