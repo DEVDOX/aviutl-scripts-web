@@ -43,6 +43,7 @@
     "rc-drawer": "4.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-tabs": "3.1.2",
     "tailwindcss": "2.0.2"
   },
   "devDependencies": {

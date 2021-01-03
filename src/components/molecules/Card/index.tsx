@@ -1,4 +1,6 @@
 import { Text } from '@/components/atoms';
+import { mdiCheck, mdiClose, mdiDownload, mdiHeart } from '@mdi/js';
+import { Icon } from '@mdi/react';
 import Link from 'next/link';
 import React from 'react';
 import classes from './index.module.css';
@@ -6,14 +8,35 @@ import classes from './index.module.css';
 const Card: React.FC = ({ children }) => (
   <Link
     href="/scripts/[uid]/[name]"
-    as="/scripts/suf24kdhba244adb34gbs/sen_kurippingu"
+    as="/scripts/suf24kdhba244adb34gbs/スーパーグリッチ"
   >
     <article className="overflow-hidden duration-300 transform bg-gray-800 rounded shadow-lg cursor-pointer hover:-translate-y-1 hover:shadow-xl bg-opacity-40 active:translate-y-0">
-      <img
-        alt="プレビュー"
-        className="block w-full h-auto"
-        src="https://picsum.photos/600/400/?random"
-      />
+      <div className="relative">
+        <img
+          alt="プレビュー"
+          className="block w-full h-auto"
+          src="https://picsum.photos/600/400/?random"
+        />
+        <div className="absolute bottom-0 right-0 flex items-center m-2 space-x-3 text-gray-300">
+          <div className="flex items-center space-x-1">
+            <Icon className="w-4 h-4" path={mdiDownload} />
+            <p className="text-sm">352</p>
+          </div>
+          <div className="flex items-center space-x-1">
+            <Icon className="w-4 h-4" path={mdiHeart} />
+            <p className="text-sm">17</p>
+          </div>
+          {/* 動く場合と動かない場合で変える */}
+          {true ? (
+            <Icon
+              className="w-4 h-4 font-bold text-green-500"
+              path={mdiCheck}
+            />
+          ) : (
+            <Icon className="w-4 h-4 font-bold text-red-500" path={mdiClose} />
+          )}
+        </div>
+      </div>
 
       <div className="p-3 space-y-4">
         <header className="flex items-end justify-between mx-2 leading-tight">
