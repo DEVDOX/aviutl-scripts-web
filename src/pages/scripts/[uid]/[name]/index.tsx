@@ -1,6 +1,13 @@
 import { Button } from '@/components/atoms';
 import { Layout } from '@/components/templates';
-import { mdiAlertCircleOutline, mdiDownload, mdiHeart, mdiXml } from '@mdi/js';
+import {
+  mdiAlertCircleOutline,
+  mdiCheck,
+  mdiClose,
+  mdiDownload,
+  mdiHeart,
+  mdiXml,
+} from '@mdi/js';
 import { Icon } from '@mdi/react';
 import { NextPage } from 'next';
 import React, { useState } from 'react';
@@ -55,7 +62,7 @@ const ScriptPage: NextPage = () => {
 
               <div className="my-8 border-t border-gray-600" />
 
-              <div className="flex p-4 space-x-6 bg-gray-800 rounded">
+              <div className="flex items-center p-4 space-x-6 bg-gray-800 rounded">
                 <div className="flex items-center space-x-2">
                   <Icon className="w-5 h-5" path={mdiDownload} />
                   <p className="text-md">352</p>
@@ -64,6 +71,17 @@ const ScriptPage: NextPage = () => {
                   <Icon className="w-5 h-5" path={mdiHeart} />
                   <p className="text-md">17</p>
                 </div>
+                {true ? (
+                  <Icon
+                    className="w-5 h-5 font-bold text-green-500"
+                    path={mdiCheck}
+                  />
+                ) : (
+                  <Icon
+                    className="w-5 h-5 font-bold text-red-500"
+                    path={mdiClose}
+                  />
+                )}
               </div>
 
               <div className="flex flex-col space-y-2">

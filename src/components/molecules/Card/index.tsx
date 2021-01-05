@@ -17,7 +17,7 @@ const Card: React.FC = ({ children }) => (
           className="block w-full h-auto"
           src="https://picsum.photos/600/400/?random"
         />
-        <div className="absolute bottom-0 right-0 flex items-center m-2 space-x-3 text-gray-300">
+        <div className="absolute bottom-0 right-0 flex items-center m-2 space-x-3 text-gray-100">
           <div className="flex items-center space-x-1">
             <Icon className="w-4 h-4" path={mdiDownload} />
             <p className="text-sm">352</p>

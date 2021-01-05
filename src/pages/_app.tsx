@@ -4,11 +4,15 @@ import 'destyle.css';
 import './global.css';
 
 import { ThemeProvider } from 'next-themes';
+import { client } from '@/apollo/lib';
+import { ApolloProvider } from '@apollo/client';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
-      <Component {...pageProps} />
+      <ApolloProvider client={client}>
+        <Component {...pageProps} />
+      </ApolloProvider>
     </ThemeProvider>
   );
 }
