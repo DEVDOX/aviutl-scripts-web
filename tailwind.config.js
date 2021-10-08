@@ -33,5 +33,7 @@ module.exports = {
       translate: ['active'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
