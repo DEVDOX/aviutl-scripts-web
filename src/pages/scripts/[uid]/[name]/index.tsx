@@ -1,5 +1,3 @@
-import { Button } from '@/components/atoms';
-import { Layout } from '@/components/templates';
 import {
   mdiAlertCircleOutline,
   mdiCheck,
@@ -12,6 +10,8 @@ import { Icon } from '@mdi/react';
 import { NextPage } from 'next';
 import React, { useState } from 'react';
 import cx from 'clsx';
+import { Layout } from '@/components/templates';
+import { Button } from '@/components/atoms';
 
 const ScriptPage: NextPage = () => {
   const [isLiked, setIsLiked] = useState<boolean>(false);
@@ -47,18 +47,18 @@ const ScriptPage: NextPage = () => {
                       <span className="text-md">いいねしました</span>
                     </Button>
                   ) : (
-                      <Button onClick={() => setIsLiked(true)}>
-                        <Icon className="w-5 h-5" path={mdiHeart} />
-                        <span className="text-md">いいねする</span>
-                      </Button>
-                    )}
+                    <Button onClick={() => setIsLiked(true)}>
+                      <Icon className="w-5 h-5" path={mdiHeart} />
+                      <span className="text-md">いいねする</span>
+                    </Button>
+                  )}
                 </>
               ) : (
-                  <Button>
-                    <Icon className="w-5 h-5" path={mdiHeart} />
-                    <span className="text-md">サインインしていいねする</span>
-                  </Button>
-                )}
+                <Button>
+                  <Icon className="w-5 h-5" path={mdiHeart} />
+                  <span className="text-md">サインインしていいねする</span>
+                </Button>
+              )}
               <div className="my-8 border-t border-gray-600" />
 
               {/* <Button className="bg-red-700 focus:bg-red-800">
@@ -74,7 +74,10 @@ const ScriptPage: NextPage = () => {
                   <p className="text-md">352</p>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Icon className={cx("w-5 h-5", isLiked ? "text-red-500" : "")} path={mdiHeart} />
+                  <Icon
+                    className={cx(`w-5 h-5`, isLiked ? `text-red-500` : ``)}
+                    path={mdiHeart}
+                  />
                   <p className="text-md">17</p>
                 </div>
                 {true ? (
@@ -83,11 +86,11 @@ const ScriptPage: NextPage = () => {
                     path={mdiCheck}
                   />
                 ) : (
-                    <Icon
-                      className="w-5 h-5 font-bold text-red-500"
-                      path={mdiClose}
-                    />
-                  )}
+                  <Icon
+                    className="w-5 h-5 font-bold text-red-500"
+                    path={mdiClose}
+                  />
+                )}
               </div>
 
               <div className="flex flex-col space-y-2">
