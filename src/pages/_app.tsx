@@ -4,8 +4,8 @@ import 'destyle.css';
 import './global.css';
 
 import { ThemeProvider } from 'next-themes';
-import { client } from '@/apollo/lib';
 import { ApolloProvider } from '@apollo/client';
+import { client } from '@/apollo/lib';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

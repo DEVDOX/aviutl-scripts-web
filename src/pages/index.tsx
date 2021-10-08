@@ -1,9 +1,9 @@
 import { useTheme } from 'next-themes';
 import React from 'react';
+import { NextPage } from 'next';
 import { Text } from '@/components/atoms';
 import Layout from '@/components/templates/Layout';
 import { Card } from '@/components/molecules';
-import { NextPage } from 'next';
 import classes from './index.module.css';
 
 const HomePage: NextPage = () => {

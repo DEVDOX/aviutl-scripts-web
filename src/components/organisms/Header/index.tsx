@@ -1,11 +1,11 @@
-import { Text } from '@/components/atoms';
 import React, { useState } from 'react';
 import cx from 'clsx';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { useAccount } from '@/hooks/useAccount';
 import Icon from '@mdi/react';
 import { mdiLoginVariant } from '@mdi/js';
+import { useAccount } from '@/hooks/useAccount';
+import { Text } from '@/components/atoms';
 import classes from './index.module.css';
 
 // Nav sample from: https://tailwindui.com/components/application-ui/navigation/navbars

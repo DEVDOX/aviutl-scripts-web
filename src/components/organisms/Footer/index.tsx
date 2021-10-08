@@ -1,6 +1,6 @@
-import { Text } from '@/components/atoms';
 import Link from 'next/link';
 import React from 'react';
+import { Text } from '@/components/atoms';
 import classes from './index.module.css';
 
 const Footer: React.FC = () => (

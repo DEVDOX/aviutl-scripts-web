@@ -1,7 +1,7 @@
-import { Button } from '@/components/atoms';
 import { mdiAccountCancelOutline } from '@mdi/js';
 import { Icon } from '@mdi/react';
 import React from 'react';
+import { Button } from '@/components/atoms';
 
 const Account: React.FC = () => (
   <Button className="bg-red-700 focus:bg-red-800">

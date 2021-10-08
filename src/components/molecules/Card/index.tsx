@@ -1,8 +1,8 @@
-import { Text } from '@/components/atoms';
 import { mdiCheck, mdiClose, mdiDownload, mdiHeart } from '@mdi/js';
 import { Icon } from '@mdi/react';
 import Link from 'next/link';
 import React from 'react';
+import { Text } from '@/components/atoms';
 import classes from './index.module.css';
 
 const Card: React.FC = ({ children }) => (

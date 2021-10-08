@@ -1,8 +1,8 @@
 import React from 'react';
 import { NextPage } from 'next';
-import { Layout } from '@/components/templates';
 import Icon from '@mdi/react';
 import { mdiGoogle } from '@mdi/js';
+import { Layout } from '@/components/templates';
 import classes from './index.module.css';
 
 const SigninPage: NextPage = () => (

@@ -16,46 +16,30 @@
     "start": "next start",
     "type-check": "tsc",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
-    "lint-staged": "lint-staged",
-    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
-    "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "./src/**/*.{ts,js,jsx,tsx}": [
-      "yarn lint --fix",
-      "yarn format"
-    ]
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write"
   },
   "dependencies": {
-    "@apollo/client": "3.3.6",
-    "@mdi/js": "5.8.55",
-    "@mdi/react": "1.4.0",
+    "@apollo/client": "3.4.16",
+    "@mdi/js": "6.2.95",
+    "@mdi/react": "1.5.0",
     "@tailwindcss/forms": "0.3.4",
     "clsx": "1.1.1",
-    "destyle.css": "2.0.2",
-    "graphql": "15.4.0",
+    "destyle.css": "3.0.0",
+    "graphql": "15.6.1",
     "next": "^11.1.2",
-    "next-themes": "0.0.10",
-    "rc-drawer": "4.1.0",
+    "next-themes": "0.0.15",
+    "rc-drawer": "4.4.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-tabs": "3.1.2"
+    "react-tabs": "3.2.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
-    "@types/node": "14.14.14",
-    "@types/react": "17.0.0",
-    "@types/react-dom": "17.0.0",
-    "@typescript-eslint/eslint-plugin": "4.11.1",
-    "@typescript-eslint/parser": "4.11.1",
+    "@types/node": "16.10.3",
+    "@types/react": "17.0.27",
+    "@types/react-dom": "17.0.9",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
+    "@typescript-eslint/parser": "4.33.0",
     "autoprefixer": "10.3.7",
-    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -65,24 +49,17 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^7.0.2",
-    "lint-staged": "^11.2.0",
     "postcss": "8.3.9",
     "postcss-preset-env": "6.7.0",
     "prettier": "^2.4.1",
-    "stylelint": "13.8.0",
+    "stylelint": "13.13.1",
     "stylelint-config-css-modules": "2.2.0",
     "stylelint-config-prettier": "8.0.2",
-    "stylelint-config-recess-order": "2.3.0",
-    "stylelint-config-standard": "20.0.0",
-    "stylelint-prettier": "1.1.2",
+    "stylelint-config-recess-order": "2.5.0",
+    "stylelint-config-standard": "22.0.0",
+    "stylelint-prettier": "1.2.0",
     "tailwindcss": "2.2.16",
     "typescript": "^4.4.3",
-    "typescript-plugin-css-modules": "3.0.1"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "typescript-plugin-css-modules": "3.4.0"
   }
 }
