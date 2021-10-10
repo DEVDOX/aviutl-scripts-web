@@ -19,8 +19,11 @@ module.exports = {
     "no-empty-source": null, // CSsが空でも良い
     "at-rule-no-unknown": [true, { // Tailwindの@tailwind用
       "ignoreAtRules": [
-        "extends",
-        "tailwind"
+        "tailwind",
+        "apply",
+        "variants",
+        "responsive",
+        "screen"
       ]
     }],
   },

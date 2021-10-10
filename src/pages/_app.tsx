@@ -1,7 +1,7 @@
 import * as React from 'react';
 import type { AppProps } from 'next/app';
 import 'destyle.css';
-import './global.css';
+import './global.scss';
 
 import { ThemeProvider } from 'next-themes';
 import { ApolloProvider } from '@apollo/client';
