@@ -1,4 +1,4 @@
-import { Component, createElement, ReactHTML } from 'react';
+import { createElement } from 'react';
 import cx from 'clsx';
 import classes from './index.module.css';
 
@@ -21,7 +21,7 @@ type TypographyProps = {
   className?: string;
 };
 
-const Text: React.FC<TypographyProps> = ({
+export const Text: React.FC<TypographyProps> = ({
   children,
   size = `inheret`,
   weight = `inheret`,

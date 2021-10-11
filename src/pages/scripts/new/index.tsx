@@ -1,21 +1,46 @@
 import React, { useState } from 'react';
 import { NextPage } from 'next';
+import { useForm } from 'react-hook-form';
 import { Layout } from '@/components/templates';
-import { TextInput } from 'carbon-components-react';
+import { TextInput } from '@/components/atoms';
 
 export type MenuType = 'アカウント' | '投稿したもの';
+
+type FormType = {
+  text: string;
+};
 
 const NewScriptPage: NextPage = () => {
   const [current, setCurrent] = useState<MenuType>(`アカウント`);
 
+  const { register, handleSubmit } = useForm<FormType>();
+
+  const onSubmit = (data: FormType) => {
+    console.log(data);
+  };
+
   return (
     <Layout>
       <div className="mx-auto mt-5 md:my-4 lg:my-8 md:col-span-2">
-        <form action="#" method="POST">
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="shadow sm:rounded-md sm:overflow-hidden">
             <div className="px-4 py-5 space-y-6 bg-gray-800 sm:p-6">
               <div className="grid grid-cols-3 gap-6">
                 <div className="col-span-3 sm:col-span-2">
+                  <div className="mb-3 space-y-5">
+                    <TextInput
+                      {...register(`text`)}
+                      name="test"
+                      labelText="テスト"
+                      helpText="あいうえお"
+                    />
+                    <TextInput
+                      name="unko"
+                      labelText="テスト"
+                      helpText="あいうえお"
+                    />
+                  </div>
+
                   {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
                   <label
                     htmlFor="name"
@@ -24,12 +49,11 @@ const NewScriptPage: NextPage = () => {
                     名前
                   </label>
                   <div className="flex mt-1 rounded-md shadow-sm">
-                    <TextInput labelText="test" id="name" />
                     <input
                       type="text"
                       name="name"
                       id="name"
-                      className="flex-1 block w-full text-gray-200 duration-150 bg-gray-900 border-gray-700 rounded-md outline-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                      className="flex-1 block w-full text-gray-200 duration-150 !bg-gray-900 border-gray-700 rounded-md outline-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                       placeholder="ほげほげスクリプト"
                     />
                   </div>

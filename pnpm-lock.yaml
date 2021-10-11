@@ -32,6 +32,7 @@ specifiers:
   rc-drawer: 4.4.2
   react: ^17.0.2
   react-dom: ^17.0.2
+  react-hook-form: 7.17.2
   react-tabs: 3.2.2
   stylelint: 13.13.1
   stylelint-config-css-modules: 2.2.0
@@ -57,6 +58,7 @@ dependencies:
   rc-drawer: 4.4.2_react-dom@17.0.2+react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-hook-form: 7.17.2_react@17.0.2
   react-tabs: 3.2.2_react@17.0.2
 
 devDependencies:
@@ -4722,6 +4724,14 @@ packages:
       object-assign: 4.1.1
       react: 17.0.2
       scheduler: 0.20.2
+    dev: false
+
+  /react-hook-form/7.17.2_react@17.0.2:
+    resolution: {integrity: sha512-oBaHwlYnbpzSFdNrs43QpcM+K2A0kUeNjV86ECYkCimlR1Ctl+tz4oQQd9plfGYkO7PJGLVMOVpUtL5EHjAcYQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17
+    dependencies:
+      react: 17.0.2
     dev: false
 
   /react-is/16.13.1:

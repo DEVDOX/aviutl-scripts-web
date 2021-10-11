@@ -5,7 +5,7 @@ import classes from './index.module.css';
 
 type ButtonProps = React.ComponentPropsWithoutRef<'button'>;
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, className, type = `button`, ...props }, ref) => (
     <button
       ref={ref}
@@ -17,5 +17,3 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     </button>
   ),
 );
-
-export default Button;
