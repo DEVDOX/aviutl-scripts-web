@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { NextPage } from 'next';
 import { useForm } from 'react-hook-form';
 import { Layout } from '@/components/templates';
-import { TextInput } from '@/components/atoms';
+import { TextField } from '@/components/molecules';
+import { TextAreaField } from '@/components/molecules/form/TextAreaField';
 
 export type MenuType = 'アカウント' | '投稿したもの';
 
 type FormType = {
   text: string;
+  unko: string;
 };
 
 const NewScriptPage: NextPage = () => {
@@ -28,17 +30,23 @@ const NewScriptPage: NextPage = () => {
               <div className="grid grid-cols-3 gap-6">
                 <div className="col-span-3 sm:col-span-2">
                   <div className="mb-3 space-y-5">
-                    <TextInput
+                    <TextField
+                      {...register(`unko`)}
+                      labelText="うんこ"
+                      helpText="あいうえお"
+                    />
+                    <TextAreaField
                       {...register(`text`)}
-                      name="test"
                       labelText="テスト"
                       helpText="あいうえお"
                     />
-                    <TextInput
-                      name="unko"
-                      labelText="テスト"
-                      helpText="あいうえお"
-                    />
+                    {/* <textarea {...register(`text`)} /> */}
+                    <button
+                      type="submit"
+                      className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    >
+                      投稿する
+                    </button>
                   </div>
 
                   {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}

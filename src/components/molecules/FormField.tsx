@@ -8,7 +8,7 @@ type Props = ComponentPropsWithoutRef<'label'> & {
 
 export const FormField: VFC<Props> = ({
   children,
-  className,
+  className = ``,
   htmlFor,
   labelText,
   helpText,
