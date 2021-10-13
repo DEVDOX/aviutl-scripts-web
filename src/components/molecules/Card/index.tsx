@@ -5,7 +5,7 @@ import React from 'react';
 import { Text } from '@/components/atoms';
 import classes from './index.module.css';
 
-const Card: React.FC = ({ children }) => (
+export const Card: React.FC = ({ children }) => (
   <Link
     href="/scripts/[uid]/[name]"
     as="/scripts/suf24kdhba244adb34gbs/スーパーグリッチ"
@@ -66,5 +66,3 @@ const Card: React.FC = ({ children }) => (
     </article>
   </Link>
 );
-
-export default Card;
