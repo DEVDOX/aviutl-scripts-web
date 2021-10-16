@@ -4,6 +4,8 @@ import Icon from '@mdi/react';
 import { mdiGoogle } from '@mdi/js';
 import { Layout } from '@/components/templates';
 import classes from './index.module.css';
+import { useSession, signIn, signOut } from "next-auth/react"
+import { Provider } from 'next-auth/client'
 
 const SigninPage: NextPage = () => (
   <Layout>
@@ -21,6 +23,7 @@ const SigninPage: NextPage = () => (
         </div>
       </div>
     </div>
+    <button onClick={() => signIn()}>Sign in</button>
   </Layout>
 );
 
